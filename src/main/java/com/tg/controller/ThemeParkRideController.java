@@ -36,4 +36,5 @@ public class ThemeParkRideController {
         themeParkRideRepository.deleteById(id);
     }
 
+    
 }
