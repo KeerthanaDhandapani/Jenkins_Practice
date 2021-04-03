@@ -32,13 +32,13 @@ public class ThemeParkApplicationIT {
                 .andReturn();
     }
     
-//     @Test
-//     public void getsAllRides() throws Exception {
-//         mockMvc.perform(MockMvcRequestBuilders.get("/ride")
-//                 .accept(MediaType.APPLICATION_JSON))
-//                 .andExpect(status().isOk())
-//                 .andReturn();
-//     }
+    @Test
+    public void getsAllRides() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/ride")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn();
+    }
 
     @Test
     public void getsSingleRide() throws Exception {
