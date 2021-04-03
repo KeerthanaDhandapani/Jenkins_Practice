@@ -19,7 +19,18 @@ public class ThemeParkApplicationIT {
 
     @Autowired
     private MockMvc mockMvc;
-
+    
+    @Test
+    public void addsNewRide() throws Exception {
+        String newRide = "{\"name\":\"Monorail\",\"description\":\"Sedate travelling ride.\",\"thrillFactor\":2,\"vomitFactor\":1}";
+        mockMvc.perform(MockMvcRequestBuilders.post("/ride")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(newRide)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn();
+    }
+    
     @Test
     public void getsAllRides() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/ride")
@@ -51,16 +62,7 @@ public class ThemeParkApplicationIT {
                 .andReturn();
     }
     
-    @Test
-    public void addsNewRide() throws Exception {
-        String newRide = "{\"name\":\"Monorail\",\"description\":\"Sedate travelling ride.\",\"thrillFactor\":2,\"vomitFactor\":1}";
-        mockMvc.perform(MockMvcRequestBuilders.post("/ride")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(newRide)
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andReturn();
-    }
+   
 
 
 }
