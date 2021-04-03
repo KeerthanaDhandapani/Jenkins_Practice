@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="com.tg.ThemeParkApplicationIT" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-10-09T05:54:28" hostname="LAPTOP-9Q30ACUF" time="0.449">
   <properties/>
-  <testcase name="getsAllRides" classname="com.tg.ThemeParkApplicationIT" time="0.399"/>
+  <testcase name="getsAllRides" classname="com.tg.ThemeParkApplicationIT" time="0.379"/>
   <testcase name="getsSingleRide" classname="com.tg.ThemeParkApplicationIT" time="0.036"/>
   <testcase name="returnsNotFoundForInvalidSingleRide" classname="com.tg.ThemeParkApplicationIT" time="0.012"/>
   <system-out><![CDATA[11:24:23.672 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.tg.ThemeParkApplicationIT]
